@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>personal - Tag - ~/seanbowers.tech</title>
+        <link>https://seanbowers.tech/tags/personal/</link>
+        <description>personal - Tag - ~/seanbowers.tech</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© Sean Bowers</copyright><lastBuildDate>Sat, 01 Jul 2023 23:27:16 -0700</lastBuildDate><atom:link href="https://seanbowers.tech/tags/personal/" rel="self" type="application/rss+xml" /><item>
+    <title>Fresh Fruit for Rotting Vegetables</title>
+    <link>https://seanbowers.tech/posts/fresh-fruit-for-rotting-vegetables/</link>
+    <pubDate>Sat, 01 Jul 2023 23:27:16 -0700</pubDate><author>
+                    <name>Sean Bowers</name>
+                </author><guid>https://seanbowers.tech/posts/fresh-fruit-for-rotting-vegetables/</guid>
+    <description><![CDATA[While I have never been a diehard Dead Kennedys fan, I have always loved their use of linguistic cacophony, hence the title. Basically, I have been building and rebuilding, building and rebuilding this website for quite sometime now. I am using Hugo for ease of use, as opposed to writing HTML, CSS, and JS for every single post. I can just tell Hugo to spin me up a markdown file, where I write my text, load it with links and images if need be, and then ask it to build HTML and CSS from my markdown given the predefined parameters.]]></description>
+</item></channel>
+</rss>

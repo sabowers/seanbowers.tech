@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Raspberry Pi - Tag - ~/seanbowers.tech</title>
+        <link>https://seanbowers.tech/tags/raspberry-pi/</link>
+        <description>Raspberry Pi - Tag - ~/seanbowers.tech</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© Sean Bowers</copyright><lastBuildDate>Tue, 04 Jul 2023 23:01:32 -0700</lastBuildDate><atom:link href="https://seanbowers.tech/tags/raspberry-pi/" rel="self" type="application/rss+xml" /><item>
+    <title>Raspberry Pi Woes</title>
+    <link>https://seanbowers.tech/posts/raspberry-pi-woes/</link>
+    <pubDate>Tue, 04 Jul 2023 23:01:32 -0700</pubDate><author>
+                    <name>Sean Bowers</name>
+                </author><guid>https://seanbowers.tech/posts/raspberry-pi-woes/</guid>
+    <description><![CDATA[I had five days off—two for a wedding, two for my regular weekend, and the 4th of July. I decided that this would be a great time to finally migrate my Nextcloud to my new Raspberry Pi case, the (Argon One)[https://argon40.com/products/argon-one-m-2-case-for-raspberry-pi-4] . I was excited to pull my personal cloud off of (Digital Ocean)[https://www.digitalocean.com/] and into my home. That is not to say that I wasn&rsquo;t pleased with the service they have at Digital Ocean, I actually enjoyed my time there quite a bit.]]></description>
+</item></channel>
+</rss>

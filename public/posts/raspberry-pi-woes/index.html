@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Raspberry Pi Woes - ~/seanbowers.tech</title><meta name="Description" content=""><meta property="og:title" content="Raspberry Pi Woes" />
+<meta property="og:description" content="I had five days off—two for a wedding, two for my regular weekend, and the 4th of July. I decided that this would be a great time to finally migrate my Nextcloud to my new Raspberry Pi case, the (Argon One)[https://argon40.com/products/argon-one-m-2-case-for-raspberry-pi-4] . I was excited to pull my personal cloud off of (Digital Ocean)[https://www.digitalocean.com/] and into my home. That is not to say that I wasn&rsquo;t pleased with the service they have at Digital Ocean, I actually enjoyed my time there quite a bit." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seanbowers.tech/posts/raspberry-pi-woes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-04T23:01:32-07:00" />
+<meta property="article:modified_time" content="2023-07-04T23:01:32-07:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Raspberry Pi Woes"/>
+<meta name="twitter:description" content="I had five days off—two for a wedding, two for my regular weekend, and the 4th of July. I decided that this would be a great time to finally migrate my Nextcloud to my new Raspberry Pi case, the (Argon One)[https://argon40.com/products/argon-one-m-2-case-for-raspberry-pi-4] . I was excited to pull my personal cloud off of (Digital Ocean)[https://www.digitalocean.com/] and into my home. That is not to say that I wasn&rsquo;t pleased with the service they have at Digital Ocean, I actually enjoyed my time there quite a bit."/>
+<meta name="application-name" content="~/seanbowers.tech">
+<meta name="apple-mobile-web-app-title" content="~/seanbowers.tech">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://seanbowers.tech/posts/raspberry-pi-woes/" /><link rel="prev" href="https://seanbowers.tech/posts/fresh-fruit-for-rotting-vegetables/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Raspberry Pi Woes",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seanbowers.tech\/posts\/raspberry-pi-woes\/"
+        },"genre": "posts","keywords": "Raspberry Pi, Nextcloud, Ubuntu, LAMP","wordcount":  605 ,
+        "url": "https:\/\/seanbowers.tech\/posts\/raspberry-pi-woes\/","datePublished": "2023-07-04T23:01:32-07:00","dateModified": "2023-07-04T23:01:32-07:00","license": "© Sean Bowers","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"authors": [{
+                        "@type": "Person",
+                        "name": "Sean Bowers"                    
+                    }],"description": ""
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="" header-mobile=""><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="~/seanbowers.tech">~/seanbowers.tech</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts"> Blog </a><a class="menu-item" href="/about"> About </a><a class="menu-item" href="/resume"> Resume </a><a class="menu-item" href="/tags"> Tags </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="~/seanbowers.tech">~/seanbowers.tech</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts" title="">Blog</a><a class="menu-item" href="/about" title="">About</a><a class="menu-item" href="/resume" title="">Resume</a><a class="menu-item" href="/tags" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Raspberry Pi Woes</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class='author'><span class="author fas fa-user-circle fa-fw"></span><span class='screen-reader-text'>  </span><a href='https://seanbowers.tech/authors/sean-bowers'>Sean Bowers</a></span>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-07-04">2023-07-04</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-07-04">2023-07-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;605 words&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p>I had five days off—two for a wedding, two for my regular weekend, and the 4th of July. I decided that this would be a great time to finally migrate my Nextcloud to my new Raspberry Pi case, the (Argon One)[https://argon40.com/products/argon-one-m-2-case-for-raspberry-pi-4] . I was excited to pull my personal cloud off of (Digital Ocean)[https://www.digitalocean.com/] and into my home. That is not to say that I wasn&rsquo;t pleased with the service they have at Digital Ocean, I actually enjoyed my time there quite a bit. But I would much rather not have to pay a host fee, as well as retain full control over my data.</p>
+<p>With that, I figured I would try my hand at the new Nextcloud AIO Docker image as a means for learning Docker. Let&rsquo;s just say running Docker on a Pi, or anything for that matter, isn&rsquo;t a one-for-one experience to what I am use to on Arch Linux. Not sure why I blindly assumed that it would be. So after cloning and recloning my microSD card and SSD for a day and a half, and decided I would do it the old fashion way, and spin up a LAMP stack server. Plus, it would be nice to get the practice.</p>
+<p>Well, what I didn&rsquo;t anticipate was trying to build out currently-developed software might possibly neccesitate more than a 32bit Raspberry Pi OS. This one took me a while, as I have historically been an Arch Linux user and have bristled with antagonism at some of the packages on Debian-based systems. So it didn&rsquo;t surprise me that I couldn&rsquo;t find an up-to-date PHP package. However, I didn&rsquo;t think the problem could be that I was running a 32bit OS.</p>
+<p>So going back to the drawing board, I learned that Ubuntu has a 64bit ARM image (again, not sure why this wasn&rsquo;t obvious to me). So I figured I would just put Ubuntu on my Pi. After struggling with switching back and forth between Windows and Linux machines flashing microSD cards (both Balena Etcher and RPI Imager packages don&rsquo;t quite work correctly as is from the Arch repos), I finally got it up and running. Cloned the the microSD to the SSD and got to work. Got the LAMP stack up and running, and began the treacherous adventure of getting access to the router for port forwarding in a house filled with people who have no idea what the password is. After a few hours, I tried the default and lo-and-behold, I finally got access to our terrifyingly vulnerable router.</p>
+<p>But it was at this that I noticed something. For some reason (definitely my fault), I was still running off the microSD card and hadn&rsquo;t switched over to the SSD. So all the work had been on the microSD, which was not going to stay in the machine. I tried cloning again, but got obscure errors that I was out of enough bandwidth to try to troubleshoot at this point. I could have thrown my machine through the window. And seeming I was still too unsure how or if I could fix the issue, I figured I would just start from scratch. So I flashed the SD card again (not sure why) and went to turn it on and found myself staring at an &ldquo;initramfs&rdquo; prompt. After staring in shock, for what seemed a decade, I tried 5 minutes of troubleshooting and resolutely turned the machine off.</p>
+<p>And with a sigh of resignation, I got some delicious vegan ice cream out of the freezer and sat back down to watch some Star Trek Discovery.</p>
+<p>Some days, or weeks, you just can&rsquo;t win.</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-07-04</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/raspberry-pi/">Raspberry Pi</a>,&nbsp;<a href="/tags/nextcloud/">Nextcloud</a>,&nbsp;<a href="/tags/ubuntu/">Ubuntu</a>,&nbsp;<a href="/tags/lamp/">LAMP</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/fresh-fruit-for-rotting-vegetables/" class="prev" rel="prev" title="Fresh Fruit for Rotting Vegetables"><i class="fas fa-angle-left fa-fw"></i>Fresh Fruit for Rotting Vegetables</a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.112.3">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

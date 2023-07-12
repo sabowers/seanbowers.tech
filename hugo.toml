@@ -1,0 +1,62 @@
+baseURL = "https://seanbowers.tech"
+languageCode = "en-us"
+title = "~/seanbowers.tech"
+theme="DoIt"
+copyright = "© Sean Bowers"
+# Code Highlight
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+paginate=5 # articles per page
+
+[params]
+	mode="dark" # color-mode → light,dark,toggle or auto
+	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
+	mathjax = true # enable MathJax support
+	katex = true # enable KaTeX support
+
+# Social Tags
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/sabowers"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/seanaaronbowers/"
+
+[[params.social]]
+name = "Fosstodon"
+icon = "masstodon"
+url = "https://fosstodon.org/@seanbowers"
+
+# Main menu Items
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Blog"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Resume"
+url = "/resume"
+weight = 4
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 5
+

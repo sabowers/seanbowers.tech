@@ -1,0 +1,42 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - ~/seanbowers.tech</title>
+        <link>https://seanbowers.tech/tags/</link>
+        <description>Tags - Tag - ~/seanbowers.tech</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© Sean Bowers</copyright><lastBuildDate>Tue, 04 Jul 2023 23:01:32 -0700</lastBuildDate><atom:link href="https://seanbowers.tech/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>LAMP</title>
+    <link>https://seanbowers.tech/tags/lamp/</link>
+    <pubDate>Tue, 04 Jul 2023 23:01:32 -0700</pubDate><author>
+        <name>Author</name>
+    </author><guid>https://seanbowers.tech/tags/lamp/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Nextcloud</title>
+    <link>https://seanbowers.tech/tags/nextcloud/</link>
+    <pubDate>Tue, 04 Jul 2023 23:01:32 -0700</pubDate><author>
+        <name>Author</name>
+    </author><guid>https://seanbowers.tech/tags/nextcloud/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Raspberry Pi</title>
+    <link>https://seanbowers.tech/tags/raspberry-pi/</link>
+    <pubDate>Tue, 04 Jul 2023 23:01:32 -0700</pubDate><author>
+        <name>Author</name>
+    </author><guid>https://seanbowers.tech/tags/raspberry-pi/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Ubuntu</title>
+    <link>https://seanbowers.tech/tags/ubuntu/</link>
+    <pubDate>Tue, 04 Jul 2023 23:01:32 -0700</pubDate><author>
+        <name>Author</name>
+    </author><guid>https://seanbowers.tech/tags/ubuntu/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>personal</title>
+    <link>https://seanbowers.tech/tags/personal/</link>
+    <pubDate>Sat, 01 Jul 2023 23:27:16 -0700</pubDate><author>
+        <name>Author</name>
+    </author><guid>https://seanbowers.tech/tags/personal/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>
