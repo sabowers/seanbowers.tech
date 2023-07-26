@@ -46,8 +46,8 @@ Portland, OR | March 2023 to Present**
     * *Network with agencies in the community to assist linking residents to resources and participate and help coordinate a monthly tenant council meeting*
     * *Maintain documentation & prepare reports reflecting resident interaction*
     * *Interview applicants & complete basic needs assessment*
-    * *Refer resdients to employment opportunities, supported employment, benefits & entitlements, medical & mental health resources*
-    * *Respond to and investigate resident & staff reports regarding building, community, CCC processws and procedures*
+    * *Refer residents to employment opportunities, supported employment, benefits & entitlements, medical & mental health resources*
+    * *Respond to and investigate resident & staff reports regarding building, community, CCC processes and procedures*
     * *Create and execute community programs and activities within the building including but not limited to ready to rent, financial literacy, neighborhood safety, potlucks, movie nights and community meetings*
     * *Adhere to all state and federal privacy and security regulations applicable to the program, and to CCC policies and agreements regarding confidentiality, privacy, and security*
  
