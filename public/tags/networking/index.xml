@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>networking - Tag - ~/seanbowers.tech</title>
+        <link>https://seanbowers.tech/tags/networking/</link>
+        <description>networking - Tag - ~/seanbowers.tech</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© Sean Bowers</copyright><lastBuildDate>Thu, 27 Jul 2023 15:08:50 -0700</lastBuildDate><atom:link href="https://seanbowers.tech/tags/networking/" rel="self" type="application/rss+xml" /><item>
+    <title>How to Make a Subnetting Cheat Sheet</title>
+    <link>https://seanbowers.tech/posts/how-to-make-a-subnetting-cheat-sheet/</link>
+    <pubDate>Thu, 27 Jul 2023 15:08:50 -0700</pubDate><author>
+                    <name>Sean Bowers</name>
+                </author><guid>https://seanbowers.tech/posts/how-to-make-a-subnetting-cheat-sheet/</guid>
+    <description><![CDATA[How to Make a Subnetting Cheat Sheet First, write out the decimal representation of each bit of a single 8bit byte.
+128 64 32 16 8 4 2 1 Next, we want to subtract the bit decimal value from 256.
+256 256 256 256 256 256 256 256 -128 -64 -32 -16 -8 -4 -2 -1 128 192 224 240 248 252 254 255 This gives us our &ldquo;magic number,&rdquo; as some people call it, as well as the remaining bits of our network from the default subnet mask.]]></description>
+</item><item>
+    <title>The Joys of Subnetting</title>
+    <link>https://seanbowers.tech/posts/the-joys-of-subnetting/</link>
+    <pubDate>Mon, 17 Jul 2023 22:37:54 -0700</pubDate><author>
+                    <name>Sean Bowers</name>
+                </author><guid>https://seanbowers.tech/posts/the-joys-of-subnetting/</guid>
+    <description><![CDATA[I have been studying for my CompTIA Network+ certification exam. This is the one of the early career trifecta (A+, Network+, &amp; Security+) that I had been hoping to avoid. I was hoping that I might be able to find a cybersecurity track job without needing the Network+, so I could forego that exam entirely. Now the exam itself may not be a necessary for getting into cybersecurity, however understanding networking in general is absolutely necessary.]]></description>
+</item></channel>
+</rss>

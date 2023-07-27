@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>CompTIA - Tag - ~/seanbowers.tech</title>
+        <link>https://seanbowers.tech/tags/comptia/</link>
+        <description>CompTIA - Tag - ~/seanbowers.tech</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© Sean Bowers</copyright><lastBuildDate>Mon, 17 Jul 2023 22:37:54 -0700</lastBuildDate><atom:link href="https://seanbowers.tech/tags/comptia/" rel="self" type="application/rss+xml" /><item>
+    <title>The Joys of Subnetting</title>
+    <link>https://seanbowers.tech/posts/the-joys-of-subnetting/</link>
+    <pubDate>Mon, 17 Jul 2023 22:37:54 -0700</pubDate><author>
+                    <name>Sean Bowers</name>
+                </author><guid>https://seanbowers.tech/posts/the-joys-of-subnetting/</guid>
+    <description><![CDATA[I have been studying for my CompTIA Network+ certification exam. This is the one of the early career trifecta (A+, Network+, &amp; Security+) that I had been hoping to avoid. I was hoping that I might be able to find a cybersecurity track job without needing the Network+, so I could forego that exam entirely. Now the exam itself may not be a necessary for getting into cybersecurity, however understanding networking in general is absolutely necessary.]]></description>
+</item></channel>
+</rss>

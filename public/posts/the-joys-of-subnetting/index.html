@@ -7,39 +7,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title>Raspberry Pi Woes - ~/seanbowers.tech</title><meta name="Description" content=""><meta property="og:title" content="Raspberry Pi Woes" />
-<meta property="og:description" content="I had five days off—two for a wedding, two for my regular weekend, and the 4th of July. I decided that this would be a great time to finally migrate my Nextcloud to my new Raspberry Pi case, the (Argon One)[https://argon40.com/products/argon-one-m-2-case-for-raspberry-pi-4] . I was excited to pull my personal cloud off of (Digital Ocean)[https://www.digitalocean.com/] and into my home. That is not to say that I wasn&rsquo;t pleased with the service they have at Digital Ocean, I actually enjoyed my time there quite a bit." />
+    <title>The Joys of Subnetting - ~/seanbowers.tech</title><meta name="Description" content="The Joys of Subnetting: Part One"><meta property="og:title" content="The Joys of Subnetting" />
+<meta property="og:description" content="The Joys of Subnetting: Part One" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://seanbowers.tech/posts/raspberry-pi-woes/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-07-04T23:01:32-07:00" />
-<meta property="article:modified_time" content="2023-07-04T23:01:32-07:00" />
+<meta property="og:url" content="https://seanbowers.tech/posts/the-joys-of-subnetting/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-17T22:37:54-07:00" />
+<meta property="article:modified_time" content="2023-07-17T22:37:54-07:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Raspberry Pi Woes"/>
-<meta name="twitter:description" content="I had five days off—two for a wedding, two for my regular weekend, and the 4th of July. I decided that this would be a great time to finally migrate my Nextcloud to my new Raspberry Pi case, the (Argon One)[https://argon40.com/products/argon-one-m-2-case-for-raspberry-pi-4] . I was excited to pull my personal cloud off of (Digital Ocean)[https://www.digitalocean.com/] and into my home. That is not to say that I wasn&rsquo;t pleased with the service they have at Digital Ocean, I actually enjoyed my time there quite a bit."/>
+<meta name="twitter:title" content="The Joys of Subnetting"/>
+<meta name="twitter:description" content="The Joys of Subnetting: Part One"/>
 <meta name="application-name" content="~/seanbowers.tech">
 <meta name="apple-mobile-web-app-title" content="~/seanbowers.tech">
 
 <meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://seanbowers.tech/posts/raspberry-pi-woes/" /><link rel="prev" href="https://seanbowers.tech/posts/fresh-fruit-for-rotting-vegetables/" /><link rel="next" href="https://seanbowers.tech/posts/the-joys-of-subnetting/" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://seanbowers.tech/posts/the-joys-of-subnetting/" /><link rel="prev" href="https://seanbowers.tech/posts/raspberry-pi-woes/" /><link rel="next" href="https://seanbowers.tech/posts/how-to-make-a-subnetting-cheat-sheet/" />
 <link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Raspberry Pi Woes",
+        "headline": "The Joys of Subnetting",
         "inLanguage": "en-us",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seanbowers.tech\/posts\/raspberry-pi-woes\/"
-        },"genre": "posts","keywords": "Raspberry Pi, Nextcloud, Ubuntu, LAMP","wordcount":  604 ,
-        "url": "https:\/\/seanbowers.tech\/posts\/raspberry-pi-woes\/","datePublished": "2023-07-04T23:01:32-07:00","dateModified": "2023-07-04T23:01:32-07:00","license": "© Sean Bowers","publisher": {
+            "@id": "https:\/\/seanbowers.tech\/posts\/the-joys-of-subnetting\/"
+        },"genre": "posts","keywords": "networking, CompTIA, subnet, TCP\/IP","wordcount":  613 ,
+        "url": "https:\/\/seanbowers.tech\/posts\/the-joys-of-subnetting\/","datePublished": "2023-07-17T22:37:54-07:00","dateModified": "2023-07-17T22:37:54-07:00","license": "© Sean Bowers","publisher": {
             "@type": "Organization",
             "name": "Author"},"authors": [{
                         "@type": "Person",
                         "name": "Sean Bowers"                    
-                    }],"description": ""
+                    }],"description": "The Joys of Subnetting: Part One"
     }
     </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
 </head>
@@ -87,25 +87,22 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <main class="main">
-            <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Raspberry Pi Woes</h1><div class="post-meta">
+            <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">The Joys of Subnetting</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><span class="author fas fa-user-circle fa-fw"></span><span class='screen-reader-text'>  </span><a href='https://seanbowers.tech/authors/sean-bowers'>Sean Bowers</a></span>
-                </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-07-04">2023-07-04</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-07-04">2023-07-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;604 words&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
-        </div><div class="content" id="content"><p>I had five days off—two for a wedding, two for my regular weekend, and the 4th of July. I decided that this would be a great time to finally migrate my Nextcloud to my new Raspberry Pi case, the (Argon One)[https://argon40.com/products/argon-one-m-2-case-for-raspberry-pi-4] . I was excited to pull my personal cloud off of (Digital Ocean)[https://www.digitalocean.com/] and into my home. That is not to say that I wasn&rsquo;t pleased with the service they have at Digital Ocean, I actually enjoyed my time there quite a bit. But I would much rather not have to pay a host fee, as well as retain full control over my data.</p>
-<p>With that, I figured I would try my hand at the new Nextcloud AIO Docker image as a means for learning Docker. Let&rsquo;s just say running Docker on a Pi, or anything for that matter, isn&rsquo;t a one-for-one experience to what I am use to on Arch Linux. Not sure why I blindly assumed that it would be. So after cloning and re-cloning my microSD card and SSD for a day and a half, and decided I would do it the old fashion way, and spin up a LAMP stack server. Plus, it would be nice to get the practice.</p>
-<p>Well, what I didn&rsquo;t anticipate was trying to build out currently-developed software might possibly necessitate more than a 32bit Raspberry Pi OS. This one took me a while, as I have historically been an Arch Linux user and have bristled with antagonism at some of the packages on Debian-based systems. So it didn&rsquo;t surprise me that I couldn&rsquo;t find an up-to-date PHP package. However, I didn&rsquo;t think the problem could be that I was running a 32bit OS.</p>
-<p>So going back to the drawing board, I learned that Ubuntu has a 64bit ARM image (again, not sure why this wasn&rsquo;t obvious to me). So I figured I would just put Ubuntu on my Pi. After struggling with switching back and forth between Windows and Linux machines flashing microSD cards (both Balena Etcher and RPI Imager packages don&rsquo;t quite work correctly as is from the Arch repos), I finally got it up and running. Cloned the microSD to the SSD and got to work. Got the LAMP stack up and running, and began the treacherous adventure of getting access to the router for port forwarding in a house filled with people who have no idea what the password is. After a few hours, I tried the default and lo-and-behold, I finally got access to our terrifyingly vulnerable router.</p>
-<p>But it was at this that I noticed something. For some reason (definitely my fault), I was still running off the microSD card and hadn&rsquo;t switched over to the SSD. So all the work had been on the microSD, which was not going to stay in the machine. I tried cloning again, but got obscure errors that I was out of enough bandwidth to try to troubleshoot at this point. I could have thrown my machine through the window. And seeming I was still too unsure how or if I could fix the issue, I figured I would just start from scratch. So I flashed the SD card again (not sure why) and went to turn it on and found myself staring at an &ldquo;initramfs&rdquo; prompt. After staring in shock, for what seemed a decade, I tried 5 minutes of troubleshooting and resolutely turned the machine off.</p>
-<p>And with a sigh of resignation, I got some delicious vegan ice cream out of the freezer and sat back down to watch some Star Trek Discovery.</p>
-<p>Some days, or weeks, you just can&rsquo;t win.</p>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-series">series <a href=""><i class="far fa-list-alt fa-fw"></i></a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-07-17">2023-07-17</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-07-17">2023-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;613 words&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p>I have been studying for my CompTIA Network+ certification exam. This is the one of the early career trifecta (A+, Network+, &amp; Security+) that I had been hoping to avoid. I was hoping that I might be able to find a cybersecurity track job without needing the Network+, so I could forego that exam entirely. Now the exam itself may not be a necessary for getting into cybersecurity, however understanding networking in general <em>is</em> absolutely necessary. And not only that, my experience of trying to get into IT for the last five years, with a year since getting both my A+ and Security+, Network+ seems to be the most sought after of the three. So I begrudgingly got my exam voucher and began studying.</p>
+<p>Much to my surprise, I am finding the content to be deeply engaging. I am loving the deep dive into the inner workings of IP addressing and how packets of data move from one host to another. Much like the bulk of the Western world, I have also taken much of the internet for granted. I am enthralled how bits turn into frames, frames into packets, packets into segments, segments into sessions, how segments pass through layer 6 to set encoding, encryption, and compression; and finally how that is presented to the end-user on the output side. Why these exams are made to be taken in order makes a lot of sense. Of course, like the contrarian I can be at times, I took them third-first-second. But I kept looking at IPv4 and IPv6 addresses, MAC addresses, and the like and was intimidated.</p>
+<p>However, I that intimidation has since washed away after confidently learning how to manually subnet. I read numerous articles, watched a myriad of videos, only to come away scratching my head each time. I was convinced that I could never learn to do it. And that was when someone suggested (Practical Networking)[https://www.practicalnetworking.net/]. Specifically, I watched his video series, (Subnetting Mastery)[https://www.youtube.com/watch?v=BWZ-MHIhqjM&amp;list=PLIFyRwBY_4bQUE4IB5c4VPRyDoLgOdExE], and it all came together. It stems from the concept of a subnetting &ldquo;cheat sheet.&rdquo; This cheat sheet framework was not new to me, as I had seen (Professor Messer)[https://www.professormesser.com/] do it, as well as (Jason Dion)[https://www.diontraining.com/home]. Both of these great instructors give cheat sheet examples, but Practical Networking taught me <strong>how</strong> to make the cheat sheet. And in the understanding of how to make the cheat sheet, I began to understand how subnetting works from a mathematical and theoretical standpoint. And the best thing about all of it, unlike many aspects of tech certification exams, is that I don&rsquo;t need to memorize anything. I just have to remember which variable I am using and where, and with some practice, which was greatly enjoyable thanks to the achievement rush I was getting, I can now easily figure out the subnet of a given IP, when coupled with a CIDR suffix, the subnet ID, the broadcast IP, the first and last usable IP on the subnet, the beginning of the next, and the number of addresses available on that subnet.</p>
+<p>Over the next few blog posts, I will layout how to make a subnetting cheat sheet, and I will show some examples of how to use it, specifically between the different network subnet masks. I realized that this is kind of going the way of the DoDo Bird these days, between the wider implementation of IPv6, and that we have apps for this sort of thing now. But I have found this process to be greatly useful in understanding how networks and subnets are made and how bits move across the network. And this sort of intimate hands on experience is worth gold in the modern age.</p>
 </div>
 
         <div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2023-07-04</span>
+                <span>Updated on 2023-07-17</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -116,14 +113,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/raspberry-pi/">Raspberry Pi</a>,&nbsp;<a href="/tags/nextcloud/">Nextcloud</a>,&nbsp;<a href="/tags/ubuntu/">Ubuntu</a>,&nbsp;<a href="/tags/lamp/">LAMP</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/networking/">networking</a>,&nbsp;<a href="/tags/comptia/">CompTIA</a>,&nbsp;<a href="/tags/subnet/">subnet</a>,&nbsp;<a href="/tags/tcp/ip/">TCP/IP</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/fresh-fruit-for-rotting-vegetables/" class="prev" rel="prev" title="Fresh Fruit for Rotting Vegetables"><i class="fas fa-angle-left fa-fw"></i>Fresh Fruit for Rotting Vegetables</a>
-            <a href="/posts/the-joys-of-subnetting/" class="next" rel="next" title="The Joys of Subnetting">The Joys of Subnetting<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/raspberry-pi-woes/" class="prev" rel="prev" title="Raspberry Pi Woes"><i class="fas fa-angle-left fa-fw"></i>Raspberry Pi Woes</a>
+            <a href="/posts/how-to-make-a-subnetting-cheat-sheet/" class="next" rel="next" title="How to Make a Subnetting Cheat Sheet">How to Make a Subnetting Cheat Sheet<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
         </main><footer class="footer">

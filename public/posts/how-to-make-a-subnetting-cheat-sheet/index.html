@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>How to Make a Subnetting Cheat Sheet - ~/seanbowers.tech</title><meta name="Description" content="The Joys of Subnetting: Part Two"><meta property="og:title" content="How to Make a Subnetting Cheat Sheet" />
+<meta property="og:description" content="The Joys of Subnetting: Part Two" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seanbowers.tech/posts/how-to-make-a-subnetting-cheat-sheet/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-27T15:08:50-07:00" />
+<meta property="article:modified_time" content="2023-07-27T15:08:50-07:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Make a Subnetting Cheat Sheet"/>
+<meta name="twitter:description" content="The Joys of Subnetting: Part Two"/>
+<meta name="application-name" content="~/seanbowers.tech">
+<meta name="apple-mobile-web-app-title" content="~/seanbowers.tech">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://seanbowers.tech/posts/how-to-make-a-subnetting-cheat-sheet/" /><link rel="prev" href="https://seanbowers.tech/posts/the-joys-of-subnetting/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Make a Subnetting Cheat Sheet",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seanbowers.tech\/posts\/how-to-make-a-subnetting-cheat-sheet\/"
+        },"genre": "posts","keywords": "subnet, ipv4, cidr, networking, TCP\/IP","wordcount":  516 ,
+        "url": "https:\/\/seanbowers.tech\/posts\/how-to-make-a-subnetting-cheat-sheet\/","datePublished": "2023-07-27T15:08:50-07:00","dateModified": "2023-07-27T15:08:50-07:00","license": "© Sean Bowers","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"authors": [{
+                        "@type": "Person",
+                        "name": "Sean Bowers"                    
+                    }],"description": "The Joys of Subnetting: Part Two"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="" header-mobile=""><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="~/seanbowers.tech">~/seanbowers.tech</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts"> Blog </a><a class="menu-item" href="/about"> About </a><a class="menu-item" href="/resume"> Resume </a><a class="menu-item" href="/tags"> Tags </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="~/seanbowers.tech">~/seanbowers.tech</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts" title="">Blog</a><a class="menu-item" href="/about" title="">About</a><a class="menu-item" href="/resume" title="">Resume</a><a class="menu-item" href="/tags" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">How to Make a Subnetting Cheat Sheet</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class='author'><span class="author fas fa-user-circle fa-fw"></span><span class='screen-reader-text'>  </span><a href='https://seanbowers.tech/authors/sean-bowers'>Sean Bowers</a></span>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-series">series <a href=""><i class="far fa-list-alt fa-fw"></i></a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-07-27">2023-07-27</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-07-27">2023-07-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;516 words&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><h1 id="how-to-make-a-subnetting-cheat-sheet" class="headerLink">
+    <a href="#how-to-make-a-subnetting-cheat-sheet" class="header-mark"></a>How to Make a Subnetting Cheat Sheet</h1><ol>
+<li>
+<p>First, write out the decimal representation of each bit of a single 8bit byte.</p>
+<table>
+<thead>
+<tr>
+<th>128</th>
+<th>64</th>
+<th>32</th>
+<th>16</th>
+<th>8</th>
+<th>4</th>
+<th>2</th>
+<th>1</th>
+</tr>
+</thead>
+</table>
+</li>
+<li>
+<p>Next, we want to subtract the bit decimal value from 256.</p>
+<table>
+<thead>
+<tr>
+<th>256</th>
+<th>256</th>
+<th>256</th>
+<th>256</th>
+<th>256</th>
+<th>256</th>
+<th>256</th>
+<th>256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-128</td>
+<td>-64</td>
+<td>-32</td>
+<td>-16</td>
+<td>-8</td>
+<td>-4</td>
+<td>-2</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>128</td>
+<td>192</td>
+<td>224</td>
+<td>240</td>
+<td>248</td>
+<td>252</td>
+<td>254</td>
+<td>255</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>This gives us our &ldquo;magic number,&rdquo; as some people call it, as well as the remaining bits of our network from the default subnet mask. From here, we can first get rid of the unnecessary 256s. Then we
+input our subnet CIDR notations, starting with the highest (/32) going right to left, picking back up on the right column when we run out of room, until we reach /1.</p>
+<table>
+<thead>
+<tr>
+<th>128</th>
+<th>64</th>
+<th>32</th>
+<th>16</th>
+<th>8</th>
+<th>4</th>
+<th>2</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>128</td>
+<td>192</td>
+<td>224</td>
+<td>240</td>
+<td>248</td>
+<td>252</td>
+<td>254</td>
+<td>255</td>
+</tr>
+<tr>
+<td>/25</td>
+<td>/26</td>
+<td>/27</td>
+<td>/28</td>
+<td>/29</td>
+<td>/30</td>
+<td>/31</td>
+<td>/32</td>
+</tr>
+<tr>
+<td>/17</td>
+<td>/18</td>
+<td>/19</td>
+<td>/20</td>
+<td>/21</td>
+<td>/22</td>
+<td>/23</td>
+<td>/24</td>
+</tr>
+<tr>
+<td>/9</td>
+<td>/10</td>
+<td>/11</td>
+<td>/12</td>
+<td>/13</td>
+<td>/14</td>
+<td>/15</td>
+<td>/16</td>
+</tr>
+<tr>
+<td>/1</td>
+<td>/2</td>
+<td>/3</td>
+<td>/4</td>
+<td>/5</td>
+<td>/6</td>
+<td>/7</td>
+<td>/8</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And here we have our subnetting cheat sheet. It might not make sense to you yet, so let&rsquo;s try to first put it into context.</p>
+<table>
+<thead>
+<tr>
+<th>128</th>
+<th>64</th>
+<th>32</th>
+<th>16</th>
+<th>8</th>
+<th>4</th>
+<th>2</th>
+<th>1</th>
+<th>&ldquo;Magic Number&rdquo;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>128</td>
+<td>192</td>
+<td>224</td>
+<td>240</td>
+<td>248</td>
+<td>252</td>
+<td>254</td>
+<td>255</td>
+<td>Network Bits</td>
+</tr>
+<tr>
+<td>/25</td>
+<td>/26</td>
+<td>/27</td>
+<td>/28</td>
+<td>/29</td>
+<td>/30</td>
+<td>/31</td>
+<td>/32</td>
+<td>Fourth Octet</td>
+</tr>
+<tr>
+<td>/17</td>
+<td>/18</td>
+<td>/19</td>
+<td>/20</td>
+<td>/21</td>
+<td>/22</td>
+<td>/23</td>
+<td>/24</td>
+<td>Third Octet</td>
+</tr>
+<tr>
+<td>/9</td>
+<td>/10</td>
+<td>/11</td>
+<td>/12</td>
+<td>/13</td>
+<td>/14</td>
+<td>/15</td>
+<td>/16</td>
+<td>Second Octet</td>
+</tr>
+<tr>
+<td>/1</td>
+<td>/2</td>
+<td>/3</td>
+<td>/4</td>
+<td>/5</td>
+<td>/6</td>
+<td>/7</td>
+<td>/8</td>
+<td>First Octet</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>Now we begin to get a clearer picture. The first line, which is commonly known as the magic number, is going to act as a range of host IPs (this will make more sense later). The second line tells us how many more network bits are in our subnet from our default subnet mask according to the coordinating CIDR value. And then each subsequent line represents all of our CIDR notation possibilities and which octet of the byte we will be working with.</p>
+<p>I was originally taught the &ldquo;magic number&rdquo; method, via the adoption of this cheat sheet, but it wasn&rsquo;t until I was taught <strong>how</strong> to make the cheat sheet did any of it begin to be clearer to me. With learning how to write this cheat sheet through merely understanding bits and bytes and the formula, you will no longer need to rely on rote memorization and guessing. In the next few blog posts, we will go over how to use the cheat sheet, along with some examples to get more intimate with it. My hope is that this can become a working part of your everyday networking, as opposed to a daunting task that has to be overcome. Often times when bored, or needing to keep my hands busy, I just make up random IP addresses and subnets just as a fun puzzle. Then I sometimes check my work with a subnetting app or website. I hope you find as much joy in this as I have.</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-07-27</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/subnet/">subnet</a>,&nbsp;<a href="/tags/ipv4/">ipv4</a>,&nbsp;<a href="/tags/cidr/">cidr</a>,&nbsp;<a href="/tags/networking/">networking</a>,&nbsp;<a href="/tags/tcp/ip/">TCP/IP</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/the-joys-of-subnetting/" class="prev" rel="prev" title="The Joys of Subnetting"><i class="fas fa-angle-left fa-fw"></i>The Joys of Subnetting</a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.115.4">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>
